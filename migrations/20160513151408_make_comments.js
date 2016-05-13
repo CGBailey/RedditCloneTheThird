@@ -11,5 +11,5 @@ return  knex.schema.createTable('comments', table=> {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('comments');
+  return knex.schema.dropTable('comments');''
 };
