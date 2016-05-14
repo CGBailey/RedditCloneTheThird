@@ -1,6 +1,5 @@
 angular.module('RedditClone').directive('comment', function() {
     return {
-        restrict: 'E',
         replace: true,
         templateUrl: '/directives/comment/comment.html',
         link: function(scope, element, attrs, fn) {
