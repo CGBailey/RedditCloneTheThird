@@ -2,12 +2,12 @@ angular.module('reddit')
   .controller('SignUpController', ['$scope', 'userService', SignUpController])
   .directive('signUp', SignUpDirective);
 
-    function signUpController ($scope, userService) {
+    function SignUpController ($scope, userService) {
         var vm = this;
 
     }
 
-    function signUpDirective () {
+    function SignUpDirective () {
       return {
           templateUrl: 'javascripts/directives/login/signUp.html',
           controller: 'LoginController',

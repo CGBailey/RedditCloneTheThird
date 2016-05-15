@@ -1,10 +1,10 @@
-angular.module('RedditClone').directive('comment', function() {
+angular.module('reddit').directive('comment', function() {
     return {
         replace: true,
         templateUrl: '/directives/comment/comment.html',
         link: function(scope, element, attrs, fn) {
             scope.comments = scope.post.comments;
-        },
+        },  
         controller: function ($scope, $timeout, postsService) {
             $scope.vs = {};
 

@@ -1,6 +1,6 @@
 angular.module('reddit')
     .controller('HeaderCtrl',function($scope, postsService){
-      angular.module('RedditClone')
+      angular.module('reddit')
   .controller('HeaderCtrl',function($scope, postsService){
       $scope.vs = $scope.vs || {};
 

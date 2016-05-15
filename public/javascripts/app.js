@@ -8,7 +8,7 @@ angular.module('reddit').config(function($stateProvider, $urlRouterProvider, $lo
           url: '/',
           views: {
               'header': {
-                templateUrl: '/header/header.html',
+                templateUrl: '/javascripts/header/header.html',
                 controller: 'HeaderCtrl'
               },
               'posts': {
@@ -17,12 +17,17 @@ angular.module('reddit').config(function($stateProvider, $urlRouterProvider, $lo
           }
         })
         .state('posts.comments', {
-          url
+          url: '/posts/:id/comment',
+          views: {
+            'comment': {
+              templateUrl: "/javascripts/comment/comment.html",
+            }
+          }
         });
-
+        $locationProvider.html5Mode(true);
 });
 
-angular.module('RedditClone').run(function($rootScope) {
+angular.module('reddit').run(function($rootScope) {
 
     $rootScope.safeApply = function(fn) {
         var phase = $rootScope.$$phase;
