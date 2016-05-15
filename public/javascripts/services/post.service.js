@@ -1,5 +1,5 @@
-angular.module('RedditClone').factory('postsService',function() {
-
+angular.module('RedditClone').service('postsService',function() {
+  return {
     var postsService = {
       $scope.newComment = {};
       $scope.newPost = {};
@@ -21,6 +21,7 @@ angular.module('RedditClone').factory('postsService',function() {
         $scope.newPost = {};
         $scope.postForm.$setUntouched();
       };
+  }
 
 
 

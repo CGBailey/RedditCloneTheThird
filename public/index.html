@@ -12,19 +12,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
   <script src="app.js"></script>
-<script src="header/header.js"></script>
-<script src="directives/posts/posts.js"></script>
-<script src="directives/comment/comment.js"></script>
-<script src="directives/vote/vote.js"></script>
-<script src="services/post.service.js"></script>
+<script src="javacsripts/header/header.js"></script>
+<script src="javacsripts/directives/posts/posts.js"></script>
+<script src="javacsripts/directives/comment/comment.js"></script>
+<script src='javacsripts/directives/signUp/signUp.js'></script>
+<script src="javacsripts/directives/login/login.js"></script>
+<script src="javacsripts/dirctives/user/user.js"></script>
+<script src="javacsripts/directives/vote/vote.js"></script>
+<script src="javacsripts/services/postService.js"></script>
+<script src="javacsripts/services/userServices.js"></script>
+
 </head>
 <body ng-controller="RedditController">
   <div id="content" class="container">
-        <div class="row">
-          <div ui-view="header"></div>
-          <div ui-view="posts"></div>
-          <div ui-view=""></div>
-        </div>
+      <ui-view></ui-view>
       </div>
 </body>
 </html>
