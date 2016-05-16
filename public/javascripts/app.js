@@ -1,4 +1,4 @@
-var app = angular.module('reddit', ['ui.router','ngAnimate']);
+
 
 angular.module('reddit').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
@@ -6,23 +6,15 @@ angular.module('reddit').config(function($stateProvider, $urlRouterProvider, $lo
     $stateProvider
         .state('home', {
           url: '/',
-          views: {
-              'header': {
-                templateUrl: '/javascripts/header/header.html',
-                controller: 'HeaderCtrl'
-              },
-              'posts': {
-                template: '<posts />'
-              }
-          }
+          controllerAs:'vm',
+          controller: 'HomeController',
+          template: "<h1>{{vm.title}}</h1>",
         })
-        .state('posts.comments', {
-          url: '/posts/:id/comment',
-          views: {
-            'comment': {
-              templateUrl: "/javascripts/comment/comment.html",
-            }
-          }
+        .state('login', {
+          url: '/login',
+          template:'<h1>Login you Fool</h1>',
+          controlerAs: 'login',
+
         });
         $locationProvider.html5Mode(true);
 });
