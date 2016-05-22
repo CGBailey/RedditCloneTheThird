@@ -1,7 +1,5 @@
 angular.module('reddit')
     .controller('HeaderCtrl',function($scope, postsService){
-      angular.module('reddit')
-  .controller('HeaderCtrl',function($scope, postsService){
       $scope.vs = $scope.vs || {};
 
       $scope.vs.filterFavorites = function (data) {
@@ -22,5 +20,3 @@ angular.module('reddit')
       }
 
 });
-
-  });

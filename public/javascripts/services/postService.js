@@ -1,4 +1,4 @@
-angular.module('reddit').service('postsService',function(scope) {
+angular.module('reddit').service('postsService',function() {
   return {
       newComment: {},
       newPost,
